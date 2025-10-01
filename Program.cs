@@ -10,6 +10,13 @@ namespace Module4
     {
         static void Main(string[] args)
         {
+
+
+
+            Console.WriteLine();
+            Console.WriteLine("Для продолжения нажмите любую кнопку");
+            Console.ReadKey();
+
             //Урок 4.1
 
             //var myapples = 5;
@@ -69,39 +76,68 @@ namespace Module4
             //Console.WriteLine(c);
 
             //Задание 4.1.16/4.1.17
-            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
+            //Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
 
-            var color = Console.ReadLine();
+            //var color = Console.ReadLine();
 
-            if (color == "red")
-            {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
+            //if (color == "red")
+            //{
+            //    Console.BackgroundColor = ConsoleColor.Red;
+            //    Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет красный!");
-            }
-            else if (color == "green")
-            {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
+            //    Console.WriteLine("Ваш любимый цвет красный!");
+            //}
+            //else if (color == "green")
+            //{
+            //    Console.BackgroundColor = ConsoleColor.Green;
+            //    Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет зеленый!");
-            }
-            else
-            {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;
+            //    Console.WriteLine("Ваш любимый цвет зеленый!");
+            //}
+            //else
+            //{
+            //    Console.BackgroundColor = ConsoleColor.Cyan;
+            //    Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет бирюзовый!");
-            }
+            //    Console.WriteLine("Ваш любимый цвет бирюзовый!");
+            //}
 
+            //Задание 4.1.18
+            //Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
 
+            //var color = Console.ReadLine();
 
+            //switch (color)
+            //{
+            //    case "red":
+            //        Console.BackgroundColor = ConsoleColor.Red;
+            //        Console.ForegroundColor = ConsoleColor.Black;
 
+            //        Console.WriteLine("Ваш любимый цвет красный!");
+            //        break;
 
-            Console.WriteLine();
-            Console.WriteLine("Для продолжения нажмите любую кнопку");
-            Console.ReadKey();
+            //    case "green":
+            //        Console.BackgroundColor = ConsoleColor.Green;
+            //        Console.ForegroundColor = ConsoleColor.Black;
+
+            //        Console.WriteLine("Ваш любимый цвет зеленый!");
+            //        break;
+
+            //    case "cyan":
+            //        Console.BackgroundColor = ConsoleColor.Cyan;
+            //        Console.ForegroundColor = ConsoleColor.Black;
+
+            //        Console.WriteLine("Ваш любимый цвет бирюзовый");
+            //        break;
+
+            //    default:
+            //        Console.BackgroundColor = ConsoleColor.Yellow;
+            //        Console.ForegroundColor = ConsoleColor.Red;
+
+            //        Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
+            //        break;
+            //}
+
         }
     }
 }
