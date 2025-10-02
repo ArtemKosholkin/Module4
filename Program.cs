@@ -10,8 +10,48 @@ namespace Module4
     {
         static void Main(string[] args)
         {
+            //Урок 4.2.
+        //for (int i = 0; i < 5; i++)
+        for (int i = 5; i > 1; i--)
+        {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Iteration {0}", i);
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
+                switch (Console.ReadLine())
+                {
+                case "red":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
 
+                    Console.WriteLine("Ваш любимый цвет красный!");
+                    break;
 
+                case "green":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Ваш любимый цвет зеленый!");
+                    break;
+
+                case "cyan":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Ваш любимый цвет бирюзовый!");
+                    break;
+
+                default:
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Red;
+
+                    Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
+                    break;
+                }
+        }
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
 
             Console.WriteLine();
             Console.WriteLine("Для продолжения нажмите любую кнопку");
