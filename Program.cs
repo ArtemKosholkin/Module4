@@ -14,14 +14,89 @@ namespace Module4
             //for (int i = 0; i < 5; i++)
             //for (int i = 5; i > 1; i--)
 
+            Console.WriteLine("Цикл While");
+
+            int k = 0;
+
+            while (k < 5)
+            {
+                Console.BackgroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine("Iteration {0}", k);
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
+
+                var text = Console.ReadLine();
+
+                if (text == "stop")
+                {
+                    Console.WriteLine("Цикл остановлен");
+                    break;
+                }
+
+                //switch (Console.ReadLine())
+                switch (text)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Ваш любимый цвет красный!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Ваш любимый цвет зеленый!");
+                        break;
+
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Ваш любимый цвет бирюзовый!");
+                        break;
+
+                    default:
+                        continue; //в этом случае номер итерации не меняется, если введен цвет, отличный от вышеуказанных
+                        //Console.BackgroundColor = ConsoleColor.Yellow;
+                        //Console.ForegroundColor = ConsoleColor.Red;
+
+                        //Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
+                        //break;
+                }
+
+                //if (text == "stop")
+                //{
+                //    Console.WriteLine("Цикл остановлен");
+                //    break;
+                //}
+
+                k++;
+            }
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
+
             Console.WriteLine("Цикл do ... while");
 
             int t = 0;
 
+            
+
             do
             {
+                var text = Console.ReadLine();
+
+                if (text == "stop")
+                {
+                    Console.WriteLine("Цикл остановлен");
+                    break;
+                }
+
                 Console.BackgroundColor = ConsoleColor.Black;
                 Console.ForegroundColor = ConsoleColor.White;
+                Console.WriteLine();
                 Console.WriteLine("Iteration {0}", t);
                 Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
                 switch (Console.ReadLine())
@@ -57,53 +132,8 @@ namespace Module4
                 }
                 t++;
             }
-            while (t < 3);
-        
+            while (t < 1);
 
-            //Console.WriteLine("Цикл While");
-
-            //int k = 0;
-
-            //while (k < 3)
-            //{
-            //    Console.BackgroundColor = ConsoleColor.Black;
-            //    Console.ForegroundColor = ConsoleColor.White;
-            //    Console.WriteLine("Iteration {0}", k);
-            //    Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы:");
-            //    switch (Console.ReadLine())
-            //    {
-                    
-            //    case "red":
-            //        Console.BackgroundColor = ConsoleColor.Red;
-            //    Console.ForegroundColor = ConsoleColor.Black;
-
-            //    Console.WriteLine("Ваш любимый цвет красный!");
-            //    break;
-
-            //    case "green":
-            //        Console.BackgroundColor = ConsoleColor.Green;
-            //    Console.ForegroundColor = ConsoleColor.Black;
-
-            //    Console.WriteLine("Ваш любимый цвет зеленый!");
-            //    break;
-
-            //    case "cyan":
-            //        Console.BackgroundColor = ConsoleColor.Cyan;
-            //    Console.ForegroundColor = ConsoleColor.Black;
-
-            //    Console.WriteLine("Ваш любимый цвет бирюзовый!");
-            //    break;
-
-            //    default:
-            //        Console.BackgroundColor = ConsoleColor.Yellow;
-            //    Console.ForegroundColor = ConsoleColor.Red;
-
-            //    Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
-            //    break;
-            //    }
-            //    k++;
-            //}
-        
 
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
