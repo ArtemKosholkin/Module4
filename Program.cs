@@ -10,32 +10,78 @@ namespace Module4
     {
         static void Main(string[] args)
         {
-            //Урок 4.2.
-            //программа будет считать сумму вводимых чисел, которые больше 0, и превётся при вводе числа 0
-            int sum = 0;
+            //Урок 4.3
 
-            while (true)
+            string[] favcolors = new string[3];
+
+            for (int i = 0; i < favcolors.Length; i++)
             {
-                Console.WriteLine("Введите число");
-                var number = Convert.ToInt32(Console.ReadLine());
-
-                if (number < 0)
-                {
-                    continue;
-                }
-                else if (number == 0)
-                {
-                    break;
-                }
-                //number > 0
-                sum += number;
+                Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+                favcolors[i] = Console.ReadLine();
             }
 
-            Console.WriteLine("Итоговая сумма = {0}", sum);
+            foreach (var color in favcolors)
+            {
+                switch (color)
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
 
+                        Console.WriteLine("Ваш любимый цвет красный!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Ваш любимый цвет зеленый!");
+                        break;
+
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Ваш любимый цвет бирюзовый");
+                        break;
+
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
+                        break;
+                }
+            }
+
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
             Console.WriteLine("Для продолжения нажмите любую кнопку");
             Console.ReadKey();
+
+            //Урок 4.2.
+            //программа будет считать сумму вводимых чисел, которые больше 0, и превётся при вводе числа 0
+            //int sum = 0;
+
+            //while (true)
+            //{
+            //    Console.WriteLine("Введите число");
+            //    var number = Convert.ToInt32(Console.ReadLine());
+
+            //    if (number < 0)
+            //    {
+            //        continue;
+            //    }
+            //    else if (number == 0)
+            //    {
+            //        break;
+            //    }
+            //    //number > 0
+            //    sum += number;
+            //}
+
+            //Console.WriteLine("Итоговая сумма = {0}", sum);
 
             //for (int i = 0; i < 5; i++)
             //for (int i = 5; i > 1; i--)
