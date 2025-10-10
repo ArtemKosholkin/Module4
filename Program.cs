@@ -12,53 +12,77 @@ namespace Module4
         {
             //Урок 4.3
 
-            string[] favcolors = new string[3];
+            var numbers = new int[] { 6, 30, 7, 14, 4, 15 };
+            int minValue = 100000,
+                minIndex = -1,
+                maxValue = 0,
+                maxIndex = -1;
 
-            for (int i = 0; i < favcolors.Length; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
-                favcolors[i] = Console.ReadLine();
-            }
-
-            foreach (var color in favcolors)
-            {
-                switch (color)
+                if (numbers[i] < minValue)
                 {
-                    case "red":
-                        Console.BackgroundColor = ConsoleColor.Red;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет красный!");
-                        break;
-
-                    case "green":
-                        Console.BackgroundColor = ConsoleColor.Green;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет зеленый!");
-                        break;
-
-                    case "cyan":
-                        Console.BackgroundColor = ConsoleColor.Cyan;
-                        Console.ForegroundColor = ConsoleColor.Black;
-
-                        Console.WriteLine("Ваш любимый цвет бирюзовый");
-                        break;
-
-                    default:
-                        Console.BackgroundColor = ConsoleColor.Yellow;
-                        Console.ForegroundColor = ConsoleColor.Red;
-
-                        Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
-                        break;
+                    minValue = numbers[i];
+                    minIndex = i;
+                }
+                if (numbers[i] > maxValue)
+                {
+                    maxValue = numbers[i];
+                    maxIndex = i;
                 }
             }
+            Console.WriteLine("Наименьший элемент массива равен {0}, его индекс {1}", minValue /*numbers[minIndex]*/, minIndex);
+            Console.WriteLine("Наибольший элемент массива равен {0}, его индекс {1}", numbers[maxIndex], maxIndex);
 
-            Console.BackgroundColor = ConsoleColor.Black;
-            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
             Console.WriteLine("Для продолжения нажмите любую кнопку");
             Console.ReadKey();
+
+            //string[] favcolors = new string[3];
+
+            //for (int i = 0; i < favcolors.Length; i++)
+            //{
+            //    Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+            //    favcolors[i] = Console.ReadLine();
+            //}
+
+            //foreach (var color in favcolors)
+            //{
+            //    switch (color)
+            //    {
+            //        case "red":
+            //            Console.BackgroundColor = ConsoleColor.Red;
+            //            Console.ForegroundColor = ConsoleColor.Black;
+
+            //            Console.WriteLine("Ваш любимый цвет красный!");
+            //            break;
+
+            //        case "green":
+            //            Console.BackgroundColor = ConsoleColor.Green;
+            //            Console.ForegroundColor = ConsoleColor.Black;
+
+            //            Console.WriteLine("Ваш любимый цвет зеленый!");
+            //            break;
+
+            //        case "cyan":
+            //            Console.BackgroundColor = ConsoleColor.Cyan;
+            //            Console.ForegroundColor = ConsoleColor.Black;
+
+            //            Console.WriteLine("Ваш любимый цвет бирюзовый");
+            //            break;
+
+            //        default:
+            //            Console.BackgroundColor = ConsoleColor.Yellow;
+            //            Console.ForegroundColor = ConsoleColor.Red;
+
+            //            Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
+            //            break;
+            //    }
+            //}
+
+            //Console.BackgroundColor = ConsoleColor.Black;
+            //Console.ForegroundColor = ConsoleColor.White;
+
 
             //Урок 4.2.
             //программа будет считать сумму вводимых чисел, которые больше 0, и превётся при вводе числа 0
