@@ -12,27 +12,52 @@ namespace Module4
         {
             //Урок 4.3
 
-            var numbers = new int[] { 6, 30, 7, 14, 4, 15 };
-            int minValue = 100000,
-                minIndex = -1,
-                maxValue = 0,
-                maxIndex = -1;
+            Console.WriteLine("Введите свое имя:");
 
-            for (int i = 0; i < numbers.Length; i++)
+            var name = Console.ReadLine();
+
+            Console.WriteLine("Ваше имя по буквам:");
+
+            foreach (var number in name)
             {
-                if (numbers[i] < minValue)
-                {
-                    minValue = numbers[i];
-                    minIndex = i;
-                }
-                if (numbers[i] > maxValue)
-                {
-                    maxValue = numbers[i];
-                    maxIndex = i;
-                }
+                Console.Write(number + " ");
             }
-            Console.WriteLine("Наименьший элемент массива равен {0}, его индекс {1}", minValue /*numbers[minIndex]*/, minIndex);
-            Console.WriteLine("Наибольший элемент массива равен {0}, его индекс {1}", numbers[maxIndex], maxIndex);
+
+            Console.WriteLine();
+            Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
+            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+
+            //string[] favcolors = new string[3];
+
+            //for (int i = 0; i < favcolors.Length; i++)
+            //{
+            //    Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+            //    favcolors[i] = Console.ReadLine();
+            //}
+
+            //Console.WriteLine(favcolors[3]); //будет ошибка, т.к. в массиве три элемента, а индекс ссылается на четвёртый (нумерация с 0)
+
+            //var numbers = new int[] { 6, 30, 7, 14, 4, 15 };
+            //int minValue = 100000,
+            //    minIndex = -1,
+            //    maxValue = 0,
+            //    maxIndex = -1;
+
+            //for (int i = 0; i < numbers.Length; i++)
+            //{
+            //    if (numbers[i] < minValue)
+            //    {
+            //        minValue = numbers[i];
+            //        minIndex = i;
+            //    }
+            //    if (numbers[i] > maxValue)
+            //    {
+            //        maxValue = numbers[i];
+            //        maxIndex = i;
+            //    }
+            //}
+            //Console.WriteLine("Наименьший элемент массива равен {0}, его индекс {1}", minValue /*numbers[minIndex]*/, minIndex);
+            //Console.WriteLine("Наибольший элемент массива равен {0}, его индекс {1}", numbers[maxIndex], maxIndex);
 
             Console.WriteLine();
             Console.WriteLine("Для продолжения нажмите любую кнопку");
