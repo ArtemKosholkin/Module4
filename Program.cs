@@ -12,20 +12,41 @@ namespace Module4
         {
             //Урок 4.3
 
+            //Задание 4.3.7
             Console.WriteLine("Введите свое имя:");
 
             var name = Console.ReadLine();
 
-            Console.WriteLine("Ваше имя по буквам:");
+            Console.Write("Ваше имя в обратном порядке: ");
 
-            foreach (var number in name)
+            for (int i = 1; i < name.Length + 1; i++)
             {
-                Console.Write(number + " ");
+                Console.Write(name[name.Length - i]);
             }
 
             Console.WriteLine();
-            Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
-            Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
+            Console.Write("Второй вариант: ");
+
+            for (int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i] + " ");
+            }
+
+
+            //Console.WriteLine("Введите свое имя:");
+
+            //var name = Console.ReadLine();
+
+            //Console.WriteLine("Ваше имя по буквам:");
+
+            //foreach (var number in name)
+            //{
+            //    Console.Write(number + " ");
+            //}
+
+            //Console.WriteLine();
+            //Console.WriteLine("Первая буква вашего имени: {0}", name[0]);
+            //Console.WriteLine("Последняя буква вашего имени: {0}", name[name.Length - 1]);
 
             //string[] favcolors = new string[3];
 
