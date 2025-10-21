@@ -12,25 +12,46 @@ namespace Module4
         {
             //Урок 4.3
 
+            int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
+
+            //ошибка, т.к. массив двумерный
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    Console.WriteLine(array[i]);
+            //}
+
+            //вывести первый элемент массива
+            //Console.WriteLine(array[0, 0]);
+
+            //вывод массива в одну строку
+            //foreach (var item in array)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            //вывести длину массива
+            Console.WriteLine(array.Length);
+
+
             //Задание 4.3.7
-            Console.WriteLine("Введите свое имя:");
+            //Console.WriteLine("Введите свое имя:");
 
-            var name = Console.ReadLine();
+            //var name = Console.ReadLine();
 
-            Console.Write("Ваше имя в обратном порядке: ");
+            //Console.Write("Ваше имя в обратном порядке: ");
 
-            for (int i = 1; i < name.Length + 1; i++)
-            {
-                Console.Write(name[name.Length - i]);
-            }
+            //for (int i = 1; i < name.Length + 1; i++)
+            //{
+            //    Console.Write(name[name.Length - i]);
+            //}
 
-            Console.WriteLine();
-            Console.Write("Второй вариант: ");
+            //Console.WriteLine();
+            //Console.Write("Второй вариант: ");
 
-            for (int i = name.Length - 1; i >= 0; i--)
-            {
-                Console.Write(name[i] + " ");
-            }
+            //for (int i = name.Length - 1; i >= 0; i--)
+            //{
+            //    Console.Write(name[i] + " ");
+            //}
 
 
             //Console.WriteLine("Введите свое имя:");
