@@ -14,6 +14,21 @@ namespace Module4
 
             int[,] array = { { 1, 2, 3 }, { 4, 5, 6 } };
 
+            for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
+            {
+                for (int k = 0; k < array.GetUpperBound(1) + 1; k++)
+                    Console.Write(array[i, k] + " ");
+                    Console.WriteLine();
+            }
+
+            //определяем количество строк (индекс последнего элемента первой (0) размерности
+            //Console.Write("Количество строк: ");
+            //Console.WriteLine(array.GetUpperBound(0) + 1 + " ");
+
+            //определяем количество колонок
+            //Console.Write("Количество колонок: ");
+            //Console.WriteLine(array.GetUpperBound(1) + 1 + " ");
+
             //ошибка, т.к. массив двумерный
             //for (int i = 0; i < array.Length; i++)
             //{
@@ -30,7 +45,7 @@ namespace Module4
             //}
 
             //вывести длину массива
-            Console.WriteLine(array.Length);
+            //Console.WriteLine(array.Length);
 
 
             //Задание 4.3.7
