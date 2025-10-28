@@ -12,20 +12,78 @@ namespace Module4
         {
             //Урок 4.3
 
-            //Задание 4.3.13 - найти сумму всех элементов массива
-            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            //Задание 4.3.15 - задать одномерный массив и вычислить количество положительных чисел
+            var array = new int[] { 2, 5, -3, 0, -4, 7 };
 
             int sum = 0;
 
-            for (int i = 0; i < arr.Length; i++)
+            //foreach (var item in array)
+            //{
+            //    if (item > 0)
+            //    {
+            //        sum++;
+            //    }
+            //}
+
+            //ещё вариант
+            for (int i = 0; i < array.Length; i++)
             {
-                //sum = sum + arr[i];
-                //вариант покороче:
-                sum += arr[i];
+                if (array[i] > 0)
+                {
+                    sum++;
+                }
             }
 
-            Console.WriteLine("Сумма всех элементов массива: ");
             Console.Write(sum);
+
+            //Задание 4.3.14 - сделать перебор массива
+            //int[][] array = new int[3][];
+
+            //array[0] = new int[2] { 1, 2 };
+            //array[1] = new int[3] { 1, 2, 3 };
+            //array[2] = new int[5] { 1, 2, 3, 4, 5 };
+
+            //foreach (var item1 in array)
+            //{
+            //    foreach (var item2 in item1)
+            //    {
+            //        Console.Write(item2 + " ");
+            //    }
+            //}
+
+            //пример зубчатого массива - вывод в одну строку введенных цветов
+            //string[] favcolors = new string[3];
+
+            //for (int i = 0; i < favcolors.Length; i++)
+            //{
+            //    Console.WriteLine("Введите любимый цвет номер {0}", i + 1);
+            //    favcolors[i] = Console.ReadLine();
+            //}
+
+            //foreach (var color in favcolors)
+            //{
+            //    foreach (var item in color)
+            //    {
+            //        Console.Write(item + " ");
+            //    }
+            //}
+
+
+            //Задание 4.3.13 - найти сумму всех элементов массива
+            //var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+            //int sum = 0;
+
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    //sum = sum + arr[i];
+            //    //вариант покороче:
+            //    sum += arr[i];
+            //}
+
+            //Console.WriteLine("Сумма всех элементов массива: ");
+            //Console.Write(sum);
+
 
             //Задание 4.3.12 - отсортировать массив в порядке возрастания цифр
             //var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
