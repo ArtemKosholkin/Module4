@@ -12,29 +12,59 @@ namespace Module4
         {
             //Урок 4.3
 
-            //Задание 4.3.15 - задать одномерный массив и вычислить количество положительных чисел
-            var array = new int[] { 2, 5, -3, 0, -4, 7 };
+            //Задание 4.3.16 - найти количество положительных элементов массива
+            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
             int sum = 0;
 
-            //foreach (var item in array)
+            //через цикл for:
+            //for (int i = 0; i <= arr.GetUpperBound(0); i++)
             //{
-            //    if (item > 0)
+            //    for (int j = 0; j <= arr.GetUpperBound(1); j++)
             //    {
-            //        sum++;
+            //        if (arr[i, j] > 0)
+            //        {
+            //            sum++;
+            //        }
             //    }
             //}
 
-            //ещё вариант
-            for (int i = 0; i < array.Length; i++)
+            //через цикл foreach:
+            foreach (var item in arr)
             {
-                if (array[i] > 0)
+                if (item > 0)
                 {
                     sum++;
                 }
             }
 
-            Console.Write(sum);
+            Console.Write("Количество положительных элементов массива: {0}", sum);
+
+
+            //Задание 4.3.15 - задать одномерный массив и вычислить количество положительных чисел
+            //var array = new int[] { 2, 5, -3, 0, -4, 7 };
+
+            //int sum = 0;
+
+            ////foreach (var item in array)
+            ////{
+            ////    if (item > 0)
+            ////    {
+            ////        sum++;
+            ////    }
+            ////}
+
+            ////ещё вариант
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    if (array[i] > 0)
+            //    {
+            //        sum++;
+            //    }
+            //}
+
+            //Console.Write(sum);
+
 
             //Задание 4.3.14 - сделать перебор массива
             //int[][] array = new int[3][];
