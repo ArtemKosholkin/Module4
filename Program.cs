@@ -12,33 +12,55 @@ namespace Module4
         {
             //Урок 4.3
 
-            //Задание 4.3.16 - найти количество положительных элементов массива
+            //Задание 4.3.17 - сортировка массива + вывод в порядке возрастания
             int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
-            int sum = 0;
+            int irow = arr.GetUpperBound(0) + 1;
+            int icolumn = arr.GetUpperBound(1) + 1;
 
-            //через цикл for:
+            Console.WriteLine("Количество строк массива: {0}", irow);
+            Console.WriteLine("Количество столбцов массива: {0}", icolumn);
+            Console.WriteLine("Вывод массива:");
+
+            for (int i = 0; i < arr.GetUpperBound(1) + 1; i++)
+            {
+                //for (int k = 0; k < arr.GetUpperBound(0) + 1; k++)
+                //{
+                    Console.Write(arr[0, i] + " ");
+                //}
+            }
+
+
+            //Задание 4.3.16 - найти количество положительных элементов массива
+            //int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+            //int sumfor = 0;
+            //int sumforeach = 0;
+
+            ////через цикл for:
             //for (int i = 0; i <= arr.GetUpperBound(0); i++)
             //{
             //    for (int j = 0; j <= arr.GetUpperBound(1); j++)
             //    {
             //        if (arr[i, j] > 0)
             //        {
-            //            sum++;
+            //            sumfor++;
             //        }
             //    }
             //}
 
-            //через цикл foreach:
-            foreach (var item in arr)
-            {
-                if (item > 0)
-                {
-                    sum++;
-                }
-            }
+            //Console.WriteLine("Количество положительных элементов массива (цикл for): {0}", sumfor);
 
-            Console.Write("Количество положительных элементов массива: {0}", sum);
+            ////через цикл foreach:
+            //foreach (var item in arr)
+            //{
+            //    if (item > 0)
+            //    {
+            //        sumforeach++;
+            //    }
+            //}
+
+            //Console.WriteLine("Количество положительных элементов массива (цикл foreach): {0}", sumforeach);
 
 
             //Задание 4.3.15 - задать одномерный массив и вычислить количество положительных чисел
