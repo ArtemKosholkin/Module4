@@ -15,21 +15,36 @@ namespace Module4
             //Задание 4.3.17 - сортировка массива + вывод в порядке возрастания
             int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
-            int irow = arr.GetUpperBound(0) + 1;
-            int icolumn = arr.GetUpperBound(1) + 1;
+            Console.WriteLine("int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };");
+            Console.WriteLine();
 
-            Console.WriteLine("Количество строк массива: {0}", irow);
-            Console.WriteLine("Количество столбцов массива: {0}", icolumn);
-            Console.WriteLine("Вывод массива:");
-
-            for (int i = 0; i < arr.GetUpperBound(1) + 1; i++)
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
             {
-                //for (int k = 0; k < arr.GetUpperBound(0) + 1; k++)
-                //{
-                    Console.Write(arr[0, i] + " ");
-                //}
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
+                    Console.Write(arr[i, j] + " ");
+                    //Console.Write(arr[i, j] + " (i = {0}, j = {1}) ", i, j);
+                    Console.WriteLine();
             }
 
+            Console.WriteLine();
+
+            int temp;
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
+                    for (int k = j + 1; k <= arr.GetUpperBound(1); k++)
+                        if (arr[i, j] > arr[i, k])
+                        {
+                            temp = arr[i, k];
+                            arr[i, k] = arr[i, j];
+                            arr[i, j] = temp;
+
+                            Console.Write(temp + " ");
+                            //Console.Write(temp + " (i = {0}, j = {1}, k = {2}) ", i, j, k);
+                            Console.WriteLine();
+                        }
+            }
+            //Конец задания 4.3.17.
 
             //Задание 4.3.16 - найти количество положительных элементов массива
             //int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
@@ -187,6 +202,8 @@ namespace Module4
             //int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
 
             //Задание 4.3.11 - перебор по столбцам
+            //int[,] array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
+
             //for (int k = 0; k < array.GetUpperBound(1) + 1; k++)
             //{
             //    for (int i = 0; i < array.GetUpperBound(0) + 1; i++)
