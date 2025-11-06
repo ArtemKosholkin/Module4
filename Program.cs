@@ -22,7 +22,6 @@ namespace Module4
             {
                 for (int j = 0; j <= arr.GetUpperBound(1); j++)
                     Console.Write(arr[i, j] + " ");
-                    //Console.Write(arr[i, j] + " (i = {0}, j = {1}) ", i, j);
                     Console.WriteLine();
             }
 
@@ -38,11 +37,14 @@ namespace Module4
                             temp = arr[i, k];
                             arr[i, k] = arr[i, j];
                             arr[i, j] = temp;
-
-                            Console.Write(temp + " ");
-                            //Console.Write(temp + " (i = {0}, j = {1}, k = {2}) ", i, j, k);
-                            Console.WriteLine();
                         }
+            }
+            //дублируем код для вывода результата, только уже после перестановки значений:
+            for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            {
+                for (int j = 0; j <= arr.GetUpperBound(1); j++)
+                    Console.Write(arr[i, j] + " ");
+                    Console.WriteLine();
             }
             //Конец задания 4.3.17.
 
