@@ -10,7 +10,38 @@ namespace Module4
     {
         static void Main(string[] args)
         {
-            //Урок 4.3
+            //Урок 4.4. Кортежи
+
+            //Задание 4.4.2 - внести введённую информацию в кортеж
+            //Console.Write("Введите своё имя: ");
+            //var name = Console.ReadLine();
+            //Console.Write("Введите свой возраст: ");
+            //var age = Console.ReadLine();
+
+            //Console.WriteLine();
+
+            //var anketa = (name, age);
+
+            //Console.WriteLine("Ваше имя: {0}", anketa.name);
+            //Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            //ещё вариант, более логичный:
+            (string name, int age) anketa;
+
+            Console.Write("Введите своё имя: ");
+            anketa.name = Console.ReadLine();
+            Console.Write("Введите свой возраст: ");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("Ваше имя: {0}", anketa.name);
+            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+
+            Console.ReadKey();
+            //Конец задания 4.4.2.
+
+
+            //Урок 4.3 Массивы
 
             //Задание 4.3.17 - сортировка массива + вывод в порядке возрастания
             //int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
@@ -649,10 +680,9 @@ namespace Module4
             //        break;
             //}
 
-            Console.WriteLine();
-            Console.WriteLine("Для продолжения нажмите любую кнопку");
-            Console.ReadKey();
-
+            //Console.WriteLine();
+            //Console.WriteLine("Для продолжения нажмите любую кнопку");
+            //Console.ReadKey();
         }
     }
 }
