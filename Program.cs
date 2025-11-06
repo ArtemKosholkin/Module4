@@ -13,39 +13,39 @@ namespace Module4
             //Урок 4.3
 
             //Задание 4.3.17 - сортировка массива + вывод в порядке возрастания
-            int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+            //int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
-            Console.WriteLine("int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };");
-            Console.WriteLine();
+            //Console.WriteLine("int[,] arr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };");
+            //Console.WriteLine();
 
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-            {
-                for (int j = 0; j <= arr.GetUpperBound(1); j++)
-                    Console.Write(arr[i, j] + " ");
-                    Console.WriteLine();
-            }
+            //for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            //{
+            //    for (int j = 0; j <= arr.GetUpperBound(1); j++)
+            //        Console.Write(arr[i, j] + " ");
+            //        Console.WriteLine();
+            //}
 
-            Console.WriteLine();
+            //Console.WriteLine();
 
-            int temp;
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-            {
-                for (int j = 0; j <= arr.GetUpperBound(1); j++)
-                    for (int k = j + 1; k <= arr.GetUpperBound(1); k++)
-                        if (arr[i, j] > arr[i, k])
-                        {
-                            temp = arr[i, k];
-                            arr[i, k] = arr[i, j];
-                            arr[i, j] = temp;
-                        }
-            }
+            //int temp;
+            //for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            //{
+            //    for (int j = 0; j <= arr.GetUpperBound(1); j++)
+            //        for (int k = j + 1; k <= arr.GetUpperBound(1); k++)
+            //            if (arr[i, j] > arr[i, k])
+            //            {
+            //                temp = arr[i, k];
+            //                arr[i, k] = arr[i, j];
+            //                arr[i, j] = temp;
+            //            }
+            //}
             //дублируем код для вывода результата, только уже после перестановки значений:
-            for (int i = 0; i <= arr.GetUpperBound(0); i++)
-            {
-                for (int j = 0; j <= arr.GetUpperBound(1); j++)
-                    Console.Write(arr[i, j] + " ");
-                    Console.WriteLine();
-            }
+            //for (int i = 0; i <= arr.GetUpperBound(0); i++)
+            //{
+            //    for (int j = 0; j <= arr.GetUpperBound(1); j++)
+            //        Console.Write(arr[i, j] + " ");
+            //        Console.WriteLine();
+            //}
             //Конец задания 4.3.17.
 
             //Задание 4.3.16 - найти количество положительных элементов массива
@@ -330,10 +330,6 @@ namespace Module4
             //}
             //Console.WriteLine("Наименьший элемент массива равен {0}, его индекс {1}", minValue /*numbers[minIndex]*/, minIndex);
             //Console.WriteLine("Наибольший элемент массива равен {0}, его индекс {1}", numbers[maxIndex], maxIndex);
-
-            Console.WriteLine();
-            Console.WriteLine("Для продолжения нажмите любую кнопку");
-            Console.ReadKey();
 
             //string[] favcolors = new string[3];
 
@@ -652,6 +648,11 @@ namespace Module4
             //        Console.WriteLine("Ваш любимый цвет тот, который вы ввели!");
             //        break;
             //}
+
+            Console.WriteLine();
+            Console.WriteLine("Для продолжения нажмите любую кнопку");
+            Console.ReadKey();
+
         }
     }
 }
