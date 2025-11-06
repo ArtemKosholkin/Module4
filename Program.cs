@@ -12,22 +12,46 @@ namespace Module4
         {
             //Урок 4.4. Кортежи
 
-            //Задание 4.4.3 - сначала вывести информацию на экран, затем запросить её ввод с клавиатуры
-            var (name, age) = ("Евгения", 27);
-            Console.WriteLine("Моё имя: {0}", name);
-            Console.WriteLine("Мой возраст: {0}", age);
+            //Задание 4.4.5 - заполнить заданный кортеж значениями
+            (string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.Write("Введите своё имя: ");
-            name = Console.ReadLine();
-            Console.Write("Введите свой возраст: ");
-            age = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите имя питомца: ");
+            Pet.Name = Console.ReadLine();
+            Console.Write("Введите тип питомца: ");
+            Pet.Type = Console.ReadLine();
+            Console.Write("Введите возраст питомца: ");
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            Pet.NameCount = Pet.Name.Length;
 
             Console.WriteLine();
-            Console.WriteLine("Ваше имя: {0}", name);
-            Console.WriteLine("Ваш возраст: {0}", age);
+            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
+            Console.WriteLine("Тип вашего питомца: {0}", Pet.Type);
+            Console.WriteLine("Возраст вашего питомца: {0}", Pet.Age);
+            Console.WriteLine("Длина имени вашего питомца: {0}", Pet.NameCount);
 
             Console.ReadKey();
-            //Конец задания 4.4.3.
+            //Конец задания 4.4.5
+
+            //Задание 4.4.4 - задать кортеж с информацией о домашнем животном без начальных данных
+            //(string Name, string Type, double Age) Pet;
+            //Конец задания 4.4.4
+
+            //Задание 4.4.3 - сначала вывести информацию на экран, затем запросить её ввод с клавиатуры
+            //var (name, age) = ("Евгения", 27);
+            //Console.WriteLine("Моё имя: {0}", name);
+            //Console.WriteLine("Мой возраст: {0}", age);
+
+            //Console.Write("Введите своё имя: ");
+            //name = Console.ReadLine();
+            //Console.Write("Введите свой возраст: ");
+            //age = Convert.ToInt32(Console.ReadLine());
+
+            //Console.WriteLine();
+            //Console.WriteLine("Ваше имя: {0}", name);
+            //Console.WriteLine("Ваш возраст: {0}", age);
+
+            //Console.ReadKey();
+            //Конец задания 4.4.3
 
             //Задание 4.4.2 - внести введённую информацию в кортеж
             //Console.Write("Введите своё имя: ");
