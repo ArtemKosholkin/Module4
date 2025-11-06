@@ -12,6 +12,23 @@ namespace Module4
         {
             //Урок 4.4. Кортежи
 
+            //Задание 4.4.3 - сначала вывести информацию на экран, затем запросить её ввод с клавиатуры
+            var (name, age) = ("Евгения", 27);
+            Console.WriteLine("Моё имя: {0}", name);
+            Console.WriteLine("Мой возраст: {0}", age);
+
+            Console.Write("Введите своё имя: ");
+            name = Console.ReadLine();
+            Console.Write("Введите свой возраст: ");
+            age = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            Console.WriteLine("Ваше имя: {0}", name);
+            Console.WriteLine("Ваш возраст: {0}", age);
+
+            Console.ReadKey();
+            //Конец задания 4.4.3.
+
             //Задание 4.4.2 - внести введённую информацию в кортеж
             //Console.Write("Введите своё имя: ");
             //var name = Console.ReadLine();
@@ -26,18 +43,18 @@ namespace Module4
             //Console.WriteLine("Ваш возраст: {0}", anketa.age);
 
             //ещё вариант, более логичный:
-            (string name, int age) anketa;
+            //(string name, int age) anketa;
 
-            Console.Write("Введите своё имя: ");
-            anketa.name = Console.ReadLine();
-            Console.Write("Введите свой возраст: ");
-            anketa.age = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите своё имя: ");
+            //anketa.name = Console.ReadLine();
+            //Console.Write("Введите свой возраст: ");
+            //anketa.age = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine();
-            Console.WriteLine("Ваше имя: {0}", anketa.name);
-            Console.WriteLine("Ваш возраст: {0}", anketa.age);
+            //Console.WriteLine();
+            //Console.WriteLine("Ваше имя: {0}", anketa.name);
+            //Console.WriteLine("Ваш возраст: {0}", anketa.age);
 
-            Console.ReadKey();
+            //Console.ReadKey();
             //Конец задания 4.4.2.
 
 
