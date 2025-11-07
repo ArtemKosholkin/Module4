@@ -10,26 +10,85 @@ namespace Module4
     {
         static void Main(string[] args)
         {
+            //Урок 4.5. Практикум
+            //Задача: Необходимо разработать методику анкетирования пользователей. Требуется сохранять информацию: об имени пользователя, фамилии, логине, длине логина, наличии/отсутствии у пользователя питомца, возрасте пользователя, трех любимых цветах пользователя.
+
+            //Задание 4.5.1 - Задайте кортеж User, который описывает необходимую информацию.
+            (string Name, string LastName, string Login, int LoginLength, bool HasPet, double Age, string[] favcolors) User;
+            //Конец задания 4.5.1
+
+            for (int j = 0; j < 3; j++)
+            {
+
+                //Задание 4.5.2 - Заполните кортеж User значениями с клавиатуры для полей: имя пользователя, фамилия, логин.
+                Console.WriteLine("Введите имя");
+                User.Name = Console.ReadLine();
+                Console.WriteLine("Введите фамилию");
+                User.LastName = Console.ReadLine();
+                Console.WriteLine("Введите логин");
+                User.Login = Console.ReadLine();
+                //Конец задания 4.5.2
+
+                //Задание 4.5.3 - Вычислите длину логина пользователя.
+                User.LoginLength = User.Login.Length;
+                //Конец задания 4.5.3
+
+                //Задание 4.5.4 - Напишите условие, которое устанавливает значение ИСТИНА в поле наличие/отсутствие животных, если пользователь вводит "Да", и ЛОЖЬ при любом другом варианте.
+                Console.WriteLine("Есть ли у вас животные? Да или Нет?");
+
+                var result = Console.ReadLine();
+
+                if (result == "Да")
+                {
+                    User.HasPet = true;
+                }
+                else
+                {
+                    User.HasPet = false;
+                }
+                //Конец задания 4.5.4
+
+                //Задание 4.5.5 - Напишите код для ввода возраста пользователя и трех его любимых цветов.
+                Console.WriteLine("Введите возраст");
+                User.Age = Convert.ToDouble(Console.ReadLine());
+                //или так:
+                //User.Age = double.Parse(Console.ReadLine());
+
+                User.favcolors = new string[3];
+
+                Console.WriteLine("Введите три любимых цвета");
+
+                for (int i = 0; i < User.favcolors.Length; i++)
+                {
+                    User.favcolors[i] = Console.ReadLine();
+                }
+                //Конец задания 4.5.5
+            }
+            //Задание 4.5.6 - Сделайте так, чтобы опрос повторялся для трех пользователей.
+            //После объявлени кортежа добавляем общий цикл и внутрь него весь написанный код.
+            //Конец задания 4.5.6
+
+
             //Урок 4.4. Кортежи
 
             //Задание 4.4.5 - заполнить заданный кортеж значениями
-            (string Name, string Type, double Age, int NameCount) Pet;
+            //(string Name, string Type, double Age, int NameCount) Pet;
 
-            Console.Write("Введите имя питомца: ");
-            Pet.Name = Console.ReadLine();
-            Console.Write("Введите тип питомца: ");
-            Pet.Type = Console.ReadLine();
-            Console.Write("Введите возраст питомца: ");
-            Pet.Age = Convert.ToDouble(Console.ReadLine());
-            Pet.NameCount = Pet.Name.Length;
+            //Console.Write("Введите имя питомца: ");
+            //Pet.Name = Console.ReadLine();
+            //Console.Write("Введите тип питомца: ");
+            //Pet.Type = Console.ReadLine();
+            //Console.Write("Введите возраст питомца: ");
+            //Pet.Age = Convert.ToDouble(Console.ReadLine());
+            //Pet.NameCount = Pet.Name.Length;
 
-            Console.WriteLine();
-            Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
-            Console.WriteLine("Тип вашего питомца: {0}", Pet.Type);
-            Console.WriteLine("Возраст вашего питомца: {0}", Pet.Age);
-            Console.WriteLine("Длина имени вашего питомца: {0}", Pet.NameCount);
+            //Console.WriteLine();
+            //Console.WriteLine("Имя вашего питомца: {0}", Pet.Name);
+            //Console.WriteLine("Тип вашего питомца: {0}", Pet.Type);
+            //Console.WriteLine("Возраст вашего питомца: {0}", Pet.Age);
+            //Console.WriteLine("Длина имени вашего питомца: {0}", Pet.NameCount);
 
-            Console.ReadKey();
+            //Console.ReadKey();
             //Конец задания 4.4.5
 
             //Задание 4.4.4 - задать кортеж с информацией о домашнем животном без начальных данных
